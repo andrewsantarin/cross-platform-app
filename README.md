@@ -12,6 +12,7 @@ An example app boilerplate for Web + desktop + mobile using React.js + React-Nat
   - [Web](#Web)
   - [Desktop](#Desktop)
   - [Mobile](#Mobile)
+  - [Linting](#Linting)
 
 
 ## Installation
@@ -109,3 +110,15 @@ yarn mobile-start
 | `mobile-start-ios`     | Starts the Expo server, connecting to iOS simulator                                                        |
 | `mobile-start-web`     | Starts the Expo server, presenting the Web content. Similar to `web-start` (the recommended script).       |
 | `mobile-eject`         | Decompiles Expo into React-Native with Android + iOS parts which can be used if native modules are needed. |
+
+
+### Linting
+The source code for the app content is written in [TypeScript](https://typescriptlang.org), a powerful static type checker for JavaScript. Included with this source code are some style rules in [`tsconfig.json`](./tsconfig.json) for keeping good code standards (the linter is [TSLint](https://github.com/palantir/tslint)).
+
+You can run the linter at will:
+
+```
+yarn lint
+```
+
+Visual Studio Code also integrates with the linter when you open a file, so you don't have to run the linter by terminal command.
