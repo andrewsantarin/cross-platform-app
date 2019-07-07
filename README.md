@@ -47,13 +47,13 @@ Simply put:
 - Additional documentation is available on [the official Electron website](https://electronjs.org/).
 - Electron usually points to the `main` field in [`package.json`](./package.json) for an entry point. However, this conflicts with the [Mobile](#Mobile) setup. Therefore, an inline reference to `src/index.desktop.js` has been provided.
 
-| Script                        | Description                                                                                                                                                                               |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `desktop-start`               | Starts the Electron client. You need to also run Web independently with `web-start` for the actual content.                                                                               |
-| `desktop-build`               | Outputs desktop code into archive files and binary installers. See [electron.builder](https://www.electron.build/) for details. You need to also build the Web content using `web-build`. |
-| `desktop-web-build`         | Outputs the Web build and desktop archive files and binary installers in one shot.                                                                                                        |
-| `desktop-web-build-release` | Same as `desktop-web-build`, but with continuous integration set up. See [the `electron-builder` documentation](https://www.electron.build/configuration/publish) for details.          |
-| `desktop-web-start`         | Starts the Electron client and Web app in one terminal. Alternatively, run `web-start` and `desktop-start` independently.                                                                 |
+| Script                        | Description                                                                                                                                                                              |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `desktop-start`             | Starts the Electron client. You need to also run Web independently with `web-start` for the actual content. If you ran `desktop-start` first, reload the view to see the content.          |
+| `desktop-build`             | Outputs desktop code into archive files and binary installers. See [electron.builder](https://www.electron.build/) for details. You need to build the Web content using `web-build` first! |
+| `desktop-web-build`         | Outputs the Web build and desktop archive files and binary installers in one shot.                                                                                                         |
+| `desktop-web-build-release` | Same as `desktop-web-build`, but with publishing set up. See [the `electron-builder` documentation](https://www.electron.build/configuration/publish) for details.                         |
+| `desktop-web-start`         | Starts the Electron client and Web app in one terminal. Alternatively, run `web-start` and `desktop-start` independently.                                                                  |
 
 
 ### Mobile
