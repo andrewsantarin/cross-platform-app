@@ -4,8 +4,8 @@ An example app boilerplate for Web + desktop + mobile using React.js + React-Nat
 
 
 - [Installation](#Installation)
-  - [Prerequisites](#Prerequisites)
-    - [Optional Prerequisites](#Optional-Prerequisites)
+  - [Tools](#Tools)
+    - [Optional Tools](#Optional-Tools)
   - [Setup](#Setup)
   - [Quick Start](#Quick-Start)
 - [Available scripts](#Available-scripts)
@@ -16,18 +16,18 @@ An example app boilerplate for Web + desktop + mobile using React.js + React-Nat
 
 ## Installation
 
-### Prerequisites
+### Tools
 You'll need the latest versions of these tools installed in order to continue:
 - [Node](https://node.js.org/)
 - [Yarn](https://yarnpkg.com)
 - [Git](https://git-scm.com/)
 
-#### Optional Prerequisites
+#### Optional Tools
 When debugging on mobile, it is possible that you would consider resorting to emulators. Additional instructions on [Expo's official website](https://docs.expo.io/versions/latest/distribution/building-standalone-apps/). You'll need the latest versions of:
 - Xcode (which includes the iOS simulator)
 - Android Studio's built-in emulator
 
-Bear in mind that these tools are optional. You can always test the app on a real device using the Expo client.
+If you don't have these tools, you can always test the app on a real device using the Expo client.
 
 ### Setup
 
@@ -83,7 +83,7 @@ yarn mobile-start
 
 ### Desktop
 - Generated with the [`electron-quick-start`](https://github.com/electron/electron-quick-start) boilerplate.
-- Runs using the `electron` framework at 5.0.6.
+- Runs using the `electron` framework at v5.0.6.
 - Additional documentation is available on [the official Electron website](https://electronjs.org/).
 - Electron usually points to the `main` field in [`package.json`](./package.json) for an entry point. However, this conflicts with the [Mobile](#Mobile) setup. Therefore, an inline reference to `src/index.desktop.js` has been provided.
 
