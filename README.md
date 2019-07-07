@@ -2,6 +2,17 @@
 
 An example app boilerplate for Web + desktop + mobile using React.js + React-Native as its core presentation layer.
 
+
+- [Installation](#Installation)
+  - [Prerequisites](#Prerequisites)
+  - [Setup](#Setup)
+  - [Run](#Run)
+- [Available scripts](#Available-scripts)
+  - [Web](#Web)
+  - [Desktop](#Desktop)
+  - [Mobile](#Mobile)
+
+
 ## Installation
 
 ### Prerequisites
@@ -25,6 +36,7 @@ Simply put:
 - `yarn web-start` for the Web instance.
 - `yarn desktop-web-start` for the desktop instance (or `yarn web-start` and `yarn desktop-start` in two separate terminals).
 - `yarn mobile-start` for the mobile instance.
+
 
 ## Available scripts
 
