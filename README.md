@@ -5,8 +5,9 @@ An example app boilerplate for Web + desktop + mobile using React.js + React-Nat
 
 - [Installation](#Installation)
   - [Prerequisites](#Prerequisites)
+    - [Optional Prerequisites](#Optional-Prerequisites)
   - [Setup](#Setup)
-  - [Run](#Run)
+  - [Quick Start](#Quick-Start)
 - [Available scripts](#Available-scripts)
   - [Web](#Web)
   - [Desktop](#Desktop)
@@ -21,6 +22,13 @@ You'll need the latest versions of these tools installed in order to continue:
 - [Yarn](https://yarnpkg.com)
 - [Git](https://git-scm.com/)
 
+#### Optional Prerequisites
+When debugging on mobile, it is possible that you would consider resorting to emulators. Additional instructions on [Expo's official website](https://docs.expo.io/versions/latest/distribution/building-standalone-apps/). You'll need the latest versions of:
+- Xcode (which includes the iOS simulator)
+- Android Studio's built-in emulator
+
+Bear in mind that these tools are optional. You can always test the app on a real device using the Expo client.
+
 ### Setup
 
 ```
@@ -29,7 +37,7 @@ cd cross-platform-app
 yarn
 ```
 
-### Run
+### Quick Start
 
 Simply put...
 
