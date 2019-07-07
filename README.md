@@ -45,8 +45,8 @@ yarn web-start
 # If you haven't run "web-start"
 yarn desktop-web-start
 
-# If you have run "web-start" or want to run to run both processes independently (e.g. you need to debug),
-# run these on two separate terminals:
+# If you have run "web-start" or want to run both processes independently (e.g. for debugging),
+# then run these on two separate terminals:
 yarn web-start # Ignore this if you've already got "web-start" running!
 yarn desktop-start
 ```
