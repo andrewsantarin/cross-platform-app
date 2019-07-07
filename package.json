@@ -53,9 +53,9 @@
     "mobile-eject": "expo eject",
     "desktop-start": "electron ./src/index.desktop.js",
     "desktop-build": "electron-builder",
-    "desktop-setup-build": "yarn web-build && yarn desktop-build",
-    "desktop-setup-build-release": "yarn web-build && electron-builder --publish=always",
-    "desktop-setup-start": "concurrently \"cross-env BROWSER=none yarn web-start\" \"wait-on http://localhost:3000 && yarn desktop-start\""
+    "desktop-web-build": "yarn web-build && yarn desktop-build",
+    "desktop-web-build-release": "yarn web-build && electron-builder --publish=always",
+    "desktop-web-start": "concurrently \"cross-env BROWSER=none yarn web-start\" \"wait-on http://localhost:3000 && yarn desktop-start\""
   },
   "eslintConfig": {
     "extends": "react-app"

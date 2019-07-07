@@ -18,6 +18,14 @@ cd cross-platform-app
 yarn
 ```
 
+### Run
+
+Simply put:
+
+- `yarn web-start` for the Web instance.
+- `yarn desktop-web-start` for the desktop instance (or `yarn web-start` and `yarn desktop-start` in two separate terminals).
+- `yarn mobile-start` for the mobile instance.
+
 ## Available scripts
 
 ### Web
@@ -43,9 +51,9 @@ yarn
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `desktop-start`               | Starts the Electron client. You need to also run Web independently with `web-start` for the actual content.                                                                               |
 | `desktop-build`               | Outputs desktop code into archive files and binary installers. See [electron.builder](https://www.electron.build/) for details. You need to also build the Web content using `web-build`. |
-| `desktop-setup-build`         | Outputs the Web build and desktop archive files and binary installers in one shot.                                                                                                        |
-| `desktop-setup-build-release` | Same as `desktop-setup-build`, but with continuous integration set up. See [the `electron-builder` documentation](https://www.electron.build/configuration/publish) for details.          |
-| `desktop-setup-start`         | Starts the Electron client and Web app in one terminal. Alternatively, run `web-start` and `desktop-start` independently.                                                                 |
+| `desktop-web-build`         | Outputs the Web build and desktop archive files and binary installers in one shot.                                                                                                        |
+| `desktop-web-build-release` | Same as `desktop-web-build`, but with continuous integration set up. See [the `electron-builder` documentation](https://www.electron.build/configuration/publish) for details.          |
+| `desktop-web-start`         | Starts the Electron client and Web app in one terminal. Alternatively, run `web-start` and `desktop-start` independently.                                                                 |
 
 
 ### Mobile
