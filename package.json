@@ -1,12 +1,13 @@
 {
   "name": "cross-platform-app",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Cross-platform JavaScript app starter with React.js + React-Native + TypeScript + Create-React-App + Electron + Expo stack.",
   "author": {
     "name": "Cezar Andrew Villegas Santarin",
     "email": "andrew.santarin@gmail.com",
     "url": "htps://linkedin.com/in/andrewsantarin"
   },
+  "version": "0.1.0",
+  "private": true,
   "build": {
     "appId": "com.CrossPlatformApp"
   },
