@@ -31,11 +31,25 @@ yarn
 
 ### Run
 
-Simply put:
+Simply put...
 
-- `yarn web-start` for the Web instance.
-- `yarn desktop-web-start` for the desktop instance (or `yarn web-start` and `yarn desktop-start` in two separate terminals).
-- `yarn mobile-start` for the mobile instance.
+- Web instance:
+  
+```
+yarn web-start
+```
+
+- Desktop instance:
+
+```
+yarn desktop-web-start
+```
+
+- Mobile instance:
+
+```
+yarn mobile-start
+```
 
 
 ## Available scripts
