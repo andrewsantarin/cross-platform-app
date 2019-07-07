@@ -5,6 +5,18 @@
 /.pnp
 .pnp.js
 
+# native
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
+
 # testing
 /coverage
 

@@ -1,22 +1,60 @@
 {
-  "name": "cross-platform-create-react-app",
+  "name": "cross-platform-app",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Cezar Andrew Villegas Santarin",
+    "email": "andrew.santarin@gmail.com",
+    "url": "htps://linkedin.com/in/andrewsantarin"
+  },
+  "build": {
+    "appId": "com.CrossPlatformApp"
+  },
+  "main": "src/index.mobile.js",
   "dependencies": {
     "@types/jest": "24.0.15",
     "@types/node": "12.0.12",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
-    "react": "^16.8.6",
+    "@types/react-native": "^0.57.60",
+    "cross-env": "^5.2.0",
+    "electron-is-dev": "^1.1.0",
+    "expo": "^33.0.7",
+    "react": "16.8.3",
     "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-native-web": "^0.11.4",
     "react-scripts": "3.0.1",
     "typescript": "3.5.2"
   },
+  "devDependencies": {
+    "babel-preset-expo": "^5.1.1",
+    "concurrently": "^4.1.1",
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4",
+    "tslint": "^5.17.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
+    "tslint-react-native": "0.0.7",
+    "wait-on": "^3.2.0"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "tslint -c tslint.json 'src/**/*'",
+    "web-start": "react-scripts start",
+    "web-build": "react-scripts build",
+    "web-test": "react-scripts test",
+    "web-eject": "react-scripts eject",
+    "mobile-start": "expo start",
+    "mobile-start-android": "expo start --android",
+    "mobile-start-ios": "expo start --ios",
+    "mobile-start-web": "expo start --web",
+    "mobile-eject": "expo eject",
+    "desktop-start": "electron ./src/index.desktop.js",
+    "desktop-build": "electron-builder",
+    "desktop-setup-build": "yarn web-build && yarn desktop-build",
+    "desktop-setup-build-release": "yarn web-build && electron-builder --publish=always",
+    "desktop-setup-start": "concurrently \"cross-env BROWSER=none yarn web-start\" \"wait-on http://localhost:3000 && yarn desktop-start\""
   },
   "eslintConfig": {
     "extends": "react-app"

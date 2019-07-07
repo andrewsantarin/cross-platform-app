@@ -1,44 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# cross-platform-app
 
-## Available Scripts
+An example app boilerplate for Web + desktop + mobile using React.js + React-Native as its core presentation layer.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+### Prerequisites
+You'll need the latest versions of these tools installed in order to continue:
+- [Node](https://node.js.org/)
+- [Yarn](https://yarnpkg.com)
+- [Git](https://git-scm.com/)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Setup
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```
+git clone https://github.com/andrewsantarin/cross-platform-app.git
+cd cross-platform-app
+yarn
+```
 
-### `npm test`
+## Available scripts
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Web
+- Generated with the [`create-react-app`](https://github.com/facebook/create-react-app) boilerplate.
+- Runs using the `react-scripts` package at v3.0.1.
+- Additional references to what each command does is available in [the local Create React App readme](./CREATE-REACT-APP-README.md).
+- All React files specifically for web are denoted with the `.web.tsx` extension.
 
-### `npm run build`
+| Script      | Description                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------|
+| `web-start` | Starts the web app at [http://localhost:3000](http://localhost:3000)                        |
+| `web-test`  | Tests the code and observes it for any changes.                                             |
+| `web-build` | Outputs minified, deployable code to the `/build` folder.                                   |
+| `web-eject` | Decompiles the `create-react-app` configuration for finer tuning purposes. Not recommended. |
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Desktop
+- Generated with the [`electron-quick-start`](https://github.com/electron/electron-quick-start) boilerplate.
+- Runs using the `electron` framework at 5.0.6.
+- Additional documentation is available on [the official Electron website](https://electronjs.org/).
+- Electron usually points to the `main` field in [`package.json`](./package.json) for an entry point. However, this conflicts with the [Mobile](#Mobile) setup. Therefore, an inline reference to `src/index.desktop.js` has been provided.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+| Script                        | Description                                                                                                                                                                               |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `desktop-start`               | Starts the Electron client. You need to also run Web independently with `web-start` for the actual content.                                                                               |
+| `desktop-build`               | Outputs desktop code into archive files and binary installers. See [electron.builder](https://www.electron.build/) for details. You need to also build the Web content using `web-build`. |
+| `desktop-setup-build`         | Outputs the Web build and desktop archive files and binary installers in one shot.                                                                                                        |
+| `desktop-setup-build-release` | Same as `desktop-setup-build`, but with continuous integration set up. See [the `electron-builder` documentation](https://www.electron.build/configuration/publish) for details.          |
+| `desktop-setup-start`         | Starts the Electron client and Web app in one terminal. Alternatively, run `web-start` and `desktop-start` independently.                                                                 |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Mobile
+- Generated with the [`expo-cli`](https://docs.expo.io/versions/latest/workflow/expo-cli) boilerplate.
+- Runs using the `expo` client at SDK33.
+- Additional documentation is available on [the official Expo website](https://expo.io/).
+- With the latest Expo settings, the `main` field in [`package.json`](./package.json) originally pointed to `node_modules/expo/AppEntry.js` for an entry point, but for consistency with Create React App, it now points to `src/index.mobile.js` using code cloned from the original path.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Script                 | Description                                                                                                |
+|------------------------|------------------------------------------------------------------------------------------------------------|
+| `mobile-start`         | Starts the Expo server at [http://localhost:19001](http://localhost:3000).                                 |
+| `mobile-start-android` | Starts the Expo server, connecting to Android simulator                                                    |
+| `mobile-start-ios`     | Starts the Expo server, connecting to iOS simulator                                                        |
+| `mobile-start-web`     | Starts the Expo server, presenting the Web content. Similar to `web-start` (the recommended script).       |
+| `mobile-eject`         | Decompiles Expo into React-Native with Android + iOS parts which can be used if native modules are needed. |

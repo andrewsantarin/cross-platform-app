@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-const App: React.FC = () => {
+import { useValueState } from './App.hooks';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export const App = () => {
+  const {
+    value,
+    incrementValue,
+    decrementValue,
+  } = useValueState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>{value}</Text>
+      <Button
+        title="+1"
+        onPress={incrementValue}
+      />
+      <Button
+        title="-1"
+        onPress={decrementValue}
+      />
+    </View>
   );
-}
-
-export default App;
+};
