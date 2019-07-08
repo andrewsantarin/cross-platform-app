@@ -7,7 +7,10 @@ An example app boilerplate for Web + desktop + mobile using React.js + React-Nat
   - [Tools](#Tools)
     - [Optional Tools](#Optional-Tools)
   - [Setup](#Setup)
-  - [Quick Start](#Quick-Start)
+- [Quick Start](#Quick-Start)
+  - [Web instance](#Web-instance)
+  - [Desktop instance](#Desktop-instance)
+  - [Mobile instance](#Mobile-instance)
 - [Available scripts](#Available-scripts)
   - [Web](#Web)
   - [Desktop](#Desktop)
@@ -43,17 +46,15 @@ cd cross-platform-app
 yarn
 ```
 
-### Quick Start
+## Quick Start
 
-Simply put...
-
-- Web instance:
+### Web instance
   
 ```sh
 yarn web-start
 ```
 
-- Desktop instance:
+### Desktop instance
 
 ```sh
 # If you haven't run "web-start"
@@ -65,7 +66,7 @@ yarn web-start # Ignore this if you've already got "web-start" running!
 yarn desktop-start
 ```
 
-- Mobile instance:
+### Mobile instance
 
 ```sh
 yarn mobile-start
