@@ -29,7 +29,7 @@ You'll need the latest versions of these tools installed in order to continue:
 - [Git](https://git-scm.com/)
 - [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli/#installation)
   
-  You can also choose to install the Expo CLI later, but it is still necessary for the mobile instance to run. When you run the mobile instance listed on [Quick Start](#Quick-Start), you will be prompted to run `npm install --global expo-cli` prior to running the instance. Let the installation run. Expo will handle of the process for you.
+  You can also choose to install the Expo CLI later, but it is still necessary for the mobile instance to run. When you run the [mobile instance](#Mobile-instance), you will be prompted to run `npm install --global expo-cli` prior to running the instance. Let the installation run. Expo will handle of the process for you.
 
 #### Optional Tools
 When debugging on mobile, it is possible that you would consider resorting to emulators. Additional instructions on [Expo's official website](https://docs.expo.io/versions/latest/distribution/building-standalone-apps/). You'll need the latest versions of:
