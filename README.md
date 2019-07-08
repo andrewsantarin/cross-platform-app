@@ -11,7 +11,7 @@ An example app boilerplate for Web + desktop + mobile using React.js + React-Nat
   - [Web instance](#Web-instance)
   - [Desktop instance](#Desktop-instance)
   - [Mobile instance](#Mobile-instance)
-- [Available scripts](#Available-scripts)
+- [Available Scripts](#Available-Scripts)
   - [Web](#Web)
   - [Desktop](#Desktop)
   - [Mobile](#Mobile)
@@ -73,7 +73,7 @@ yarn mobile-start
 ```
 
 
-## Available scripts
+## Available Scripts
 
 ### Web
 - Generated with the [`create-react-app`](https://github.com/facebook/create-react-app) boilerplate.
