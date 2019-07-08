@@ -4,9 +4,9 @@ import logo from './logo.svg';
 import './App.css';
 
 // Shared modules, most likely to do with just the business logic.
-import { INITIAL_VALUE, STEP_VALUE } from './App.constants';
-import { useValueState } from './App.hooks';
-import { toAddString, toSubtractString } from './App.utilities';
+import { INITIAL_VALUE, STEP_VALUE } from 'App.constants';
+import { useValueState } from 'App.hooks';
+import { toAddString, toSubtractString } from 'App.utilities';
 
 export const App: FunctionComponent = () => {
   const {

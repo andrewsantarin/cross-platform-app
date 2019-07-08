@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 // Shared modules, most likely to do with just the business logic.
-import { INITIAL_VALUE, STEP_VALUE } from './App.constants';
-import { useValueState } from './App.hooks';
-import { toAddString, toSubtractString } from './App.utilities';
+import { INITIAL_VALUE, STEP_VALUE } from 'App.constants';
+import { useValueState } from 'App.hooks';
+import { toAddString, toSubtractString } from 'App.utilities';
 
 const styles = StyleSheet.create({
   container: {
