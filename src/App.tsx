@@ -1,7 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
+// Shared modules, most likely to do with just the business logic.
+import { INITIAL_VALUE, STEP_VALUE } from './App.constants';
 import { useValueState } from './App.hooks';
+import { toAddString, toSubtractString } from './App.utilities';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,18 +20,18 @@ export const App = () => {
     value,
     incrementValue,
     decrementValue,
-  } = useValueState(0);
+  } = useValueState(INITIAL_VALUE, STEP_VALUE);
 
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <Text>{value}</Text>
       <Button
-        title="+1"
+        title={toAddString(STEP_VALUE)}
         onPress={incrementValue}
       />
       <Button
-        title="-1"
+        title={toSubtractString(STEP_VALUE)}
         onPress={decrementValue}
       />
     </View>

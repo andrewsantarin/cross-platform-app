@@ -1,15 +1,19 @@
 import React, { FunctionComponent } from 'react';
+
 import logo from './logo.svg';
 import './App.css';
 
+// Shared modules, most likely to do with just the business logic.
+import { INITIAL_VALUE, STEP_VALUE } from './App.constants';
 import { useValueState } from './App.hooks';
+import { toAddString, toSubtractString } from './App.utilities';
 
 export const App: FunctionComponent = () => {
   const {
     value,
     incrementValue,
     decrementValue,
-  } = useValueState(0);
+  } = useValueState(INITIAL_VALUE, STEP_VALUE);
 
   return (
     <div className="App">
@@ -28,8 +32,8 @@ export const App: FunctionComponent = () => {
         </a>
         <div>
           <span>{value}</span>
-          <button onClick={incrementValue}>+1</button>
-          <button onClick={decrementValue}>-1</button>
+          <button onClick={incrementValue}>{toAddString(STEP_VALUE)}</button>
+          <button onClick={decrementValue}>{toSubtractString(STEP_VALUE)}</button>
         </div>
       </header>
     </div>
